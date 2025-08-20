@@ -13,10 +13,10 @@ Paper Link: [Scaling Deep Contrastive Learning Batch Size under Memory Limited S
 The project's documentation is organized as follows: 
 
 ```
-Gesture_dataset				            --Gesture Dataset
+Gesture_dataset				              --Gesture Dataset
     |------data
     |------labels
-Logs	                            --Logs for training and testing
+Logs	                              --Logs for training and testing
     |------train.log
     |------test.log
     |------model.pth                 
@@ -64,7 +64,7 @@ The labels for the gestures are provided in a separate file, where each gesture 
 The model is based on the MoCo framework, which utilizes a contrastive learning approach to learn representations from the FMCW radar data. The model architecture includes a transformer block for feature extraction and a patch embedding layer to process the radar signals. The GradCache technique is employed to handle large batch sizes efficiently.<br>
 
 ### PatchEmbedding
-The PatchEmbedding class converts the input radar RDI into patches for processing by the transformer block, enabling the model to effectively capture local patterns. This block uses the timm library to implement the patch embedding layer, specifically resnet10t.c3_in1k. To prevent the features from becoming too small, the max-pooling and first convolutional layers have been modified. The primary goal of this block is to extract intra-frame information.<br>
+The PatchEmbedding class converts the input radar RDI into patches for processing by the transformer block, enabling the model to effectively capture local patterns. This block uses the timm library to implement the patch embedding layer, specifically `resnet10t.c3_in1k`. To prevent the features from becoming too small, the max-pooling and first convolutional layers have been modified. The primary goal of this block is to extract intra-frame information.<br>
 
 `data: (32, 6, 32, 32) ---> (32, 256)`
 
