@@ -13,10 +13,10 @@ Paper Link: [Scaling Deep Contrastive Learning Batch Size under Memory Limited S
 The project's documentation is organized as follows: 
 
 ```
-Gesture_dataset				              --Gesture Dataset
+Gesture_dataset				              
     |------data
     |------labels
-Logs	                              --Logs for training and testing
+Logs	                              
     |------train.log
     |------test.log
     |------model.pth                 
@@ -25,7 +25,6 @@ Logs	                              --Logs for training and testing
 .gitignore
 README.md
 run.py                              --Main file for training and testing
-requirements.txt					          --Package Required for the Project
 dataset.py                          --Dataset class for loading and processing data
 encoder.py                          --Encoder class for the MoCo model
 PatchEmbedding.py                   --Patch embedding class for the MoCo model
